@@ -8,6 +8,8 @@ class ofApp : public ofBaseApp{
 		void update();
 		void draw();
 		void audioIn(float * input, int bufferSize, int nChannels);
+		void keyPressed(int key);
+
 
 		ofSoundStream soundStream;
 		vector <ofVec2f> samples;
@@ -16,4 +18,5 @@ class ofApp : public ofBaseApp{
 		int gain;
 		float rms;
 		float t, p;
+		float volume;
 };

@@ -59,4 +59,8 @@ void ofApp::audioIn(float * input, int bufferSize, int nChannels) {
 		samples[i].y = input[i * 2 + 1] * 0.5;
 	}
 }
+void ofApp::keyPressed(int key) {
+	if (key == OF_KEY_UP) threshold -= 0.005; cout << "input volume lowered, threshold is now: " << threshold << endl;
+	if (key == OF_KEY_DOWN) threshold += 0.005; cout << "input volume raised, threshold is now: " << threshold << endl;
+}
 //------------------------------------------------------------------
